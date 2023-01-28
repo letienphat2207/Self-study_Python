@@ -27,7 +27,6 @@ students.append(s1)
 students.append(s2)
 students.append(s3)
 
-print(students[0].name)
 
-# for i in range(len(students)):
-# 	students[i].print_info()
+for i in range(len(students)):
+	students[i].print_info()
