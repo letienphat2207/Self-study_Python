@@ -24,9 +24,21 @@ def print_video(video):
 def print_videos(videos):
     for i in range(len(videos)):
         print_video(videos[i])
+        
+def write_video_to_txt(video,file):
+         file.write(video.title + "\n") 
+         file.write(video.link + "\n")
+            
+def write_videos_to_FileIO(videos):
+    with open("data.txt","w") as file:
+        for i in range (len(videos)):
+           write_video_to_txt(videos[i],file)
+           
+
 def main():
     vids = read_videos()
     print_video(vids[0])
     print("xxxxxxxxxxxxxxxxxxxx")
     print_videos(vids)
+    write_videos_to_FileIO(vids)
 main()
